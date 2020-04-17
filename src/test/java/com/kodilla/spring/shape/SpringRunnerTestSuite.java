@@ -1,9 +1,6 @@
-package com.kodilla.spring;
+package com.kodilla.spring.shape;
 
 
-import com.kodilla.spring.shape.Circle;
-import com.kodilla.spring.shape.Shape;
-import com.kodilla.spring.shape.Triangle;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,8 +27,7 @@ public class SpringRunnerTestSuite {
 	@Test
 	public void testTriangleLoadedIntoContainer() {
 		//Given
-		ApplicationContext context =
-				new AnnotationConfigApplicationContext("com.kodilla.spring");
+		ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
 		Shape shape = context.getBean(Triangle.class);
 		//When
 		String name = shape.getShapeName();
