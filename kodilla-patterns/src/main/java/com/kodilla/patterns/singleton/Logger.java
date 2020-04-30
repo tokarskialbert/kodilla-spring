@@ -10,9 +10,14 @@ public class Logger {
 
     public static Logger getInstance() {
 
-        if(loggerInstatnce == null) {
+        if (loggerInstatnce == null) {
 
-            loggerInstatnce = new Logger();
+            synchronized (Logger.class) {
+
+                if ((loggerInstatnce == null))
+
+                    loggerInstatnce = new Logger();
+            }
         }
 
         return loggerInstatnce;
