@@ -8,6 +8,10 @@ group = 'com.kodilla'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
+springBoot {
+    mainClassName = 'com.kodilla.spring.web.KodillaSpringWebApplication'
+}
+
 repositories {
     mavenCentral()
 }
