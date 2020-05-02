@@ -7,13 +7,13 @@ import com.kodilla.patterns.factory.Square;
 
 public class TaskFactory {
 
-    public static final String DRIVING_TASK  = "driving task";
-    public static final String PAINTING_TASK  = "painting task";
-    public static final String SHOPPING_TASK  = "shopping task";
+    public static final TASKS DRIVING_TASK  = TASKS.DRIVING_TASK;
+    public static final TASKS PAINTING_TASK = TASKS.PAINTING_TASK;
+    public static final TASKS SHOPPING_TASK = TASKS.SHOPPING_TASK;
 
-    public final Task makeTask(final String taskClass) {
+    public final Task makeTask(final TASKS taskEnum) {
 
-        switch (taskClass) {
+        switch (taskEnum) {
             case DRIVING_TASK:
                 return new DrivingTask("Driving Task", "Library", "Ford");
             case PAINTING_TASK:
