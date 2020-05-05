@@ -1,5 +1,5 @@
 package com.kodilla.patterns.builder.bigmac;
 
-public enum BUN {
+public enum Bun {
     SEZAM_BUN, REGULAR_BUN;
 }

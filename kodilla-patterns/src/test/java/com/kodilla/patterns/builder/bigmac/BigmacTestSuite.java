@@ -1,6 +1,5 @@
 package com.kodilla.patterns.builder.bigmac;
 
-import com.kodilla.patterns.builder.pizza.Pizza;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,13 +10,13 @@ public class BigmacTestSuite {
 
         //Given
         Bigmac bigmac = new Bigmac.Builder()
-                .bun(BUN.SEZAM_BUN)
+                .bun(Bun.SEZAM_BUN)
                 .burger(2)
-                .sauce(SAUCE.KETCHUP)
-                .ingredient(INGREDIENTS.CHEESE)
-                .ingredient(INGREDIENTS.BACON)
-                .ingredient(INGREDIENTS.CUCUMBER)
-                .ingredient(INGREDIENTS.LETTUCE)
+                .sauce(Sauce.KETCHUP)
+                .ingredient(Ingredients.CHEESE)
+                .ingredient(Ingredients.BACON)
+                .ingredient(Ingredients.CUCUMBER)
+                .ingredient(Ingredients.LETTUCE)
                 .build();
 
         System.out.println(bigmac);

@@ -1,18 +1,16 @@
 package com.kodilla.patterns.builder.bigmac;
 
-import sun.text.bidi.BidiLine;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Bigmac {
 
-    private BUN bun;
+    private Bun bun;
     private int burgers;
-    private SAUCE sauce;
-    private List<INGREDIENTS> ingredients;
+    private Sauce sauce;
+    private List<Ingredients> ingredients;
 
-    public BUN getBun() {
+    public Bun getBun() {
         return bun;
     }
 
@@ -20,15 +18,15 @@ public class Bigmac {
         return burgers;
     }
 
-    public SAUCE getSauce() {
+    public Sauce getSauce() {
         return sauce;
     }
 
-    public List<INGREDIENTS> getIngredients() {
+    public List<Ingredients> getIngredients() {
         return ingredients;
     }
 
-    private Bigmac(final BUN bun, final int burgers, final SAUCE sauce, final List<INGREDIENTS> ingredients) {
+    private Bigmac(final Bun bun, final int burgers, final Sauce sauce, final List<Ingredients> ingredients) {
 
         this.bun = bun;
         this.burgers = burgers;
@@ -48,12 +46,12 @@ public class Bigmac {
 
     public static class Builder {
 
-        private BUN bun;
+        private Bun bun;
         private int burgers;
-        private SAUCE sauce;
-        private List<INGREDIENTS> ingredients = new ArrayList<>();
+        private Sauce sauce;
+        private List<Ingredients> ingredients = new ArrayList<>();
 
-        public Builder bun(BUN bun) {
+        public Builder bun(Bun bun) {
             this.bun = bun;
             return this;
         }
@@ -63,12 +61,12 @@ public class Bigmac {
             return this;
         }
 
-        public Builder sauce(SAUCE sauce) {
+        public Builder sauce(Sauce sauce) {
             this.sauce = sauce;
             return this;
         }
 
-        public Builder ingredient(INGREDIENTS ingredient) {
+        public Builder ingredient(Ingredients ingredient) {
             ingredients.add(ingredient);
             return this;
         }
