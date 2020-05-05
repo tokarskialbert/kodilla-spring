@@ -12,7 +12,7 @@ public class TaskFactoryTestSuite {
         TaskFactory taskFactory = new TaskFactory();
 
         //when
-        Task drivingTask = taskFactory.makeTask(TaskFactory.DRIVING_TASK);
+        Task drivingTask = taskFactory.makeTask(Tasks.DRIVING_TASK);
         String taskName = drivingTask.getTaskName();
 
         //then
@@ -26,7 +26,7 @@ public class TaskFactoryTestSuite {
         TaskFactory taskFactory = new TaskFactory();
 
         //when
-        Task shoppingTask = taskFactory.makeTask(TaskFactory.SHOPPING_TASK);
+        Task shoppingTask = taskFactory.makeTask(Tasks.SHOPPING_TASK);
         String taskName = shoppingTask.getTaskName();
 
         //then

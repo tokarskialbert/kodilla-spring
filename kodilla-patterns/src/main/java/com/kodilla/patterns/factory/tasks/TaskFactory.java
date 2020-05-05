@@ -1,17 +1,8 @@
 package com.kodilla.patterns.factory.tasks;
 
-import com.kodilla.patterns.factory.Circle;
-import com.kodilla.patterns.factory.Rectangle;
-import com.kodilla.patterns.factory.Shape;
-import com.kodilla.patterns.factory.Square;
-
 public class TaskFactory {
 
-    public static final TASKS DRIVING_TASK  = TASKS.DRIVING_TASK;
-    public static final TASKS PAINTING_TASK = TASKS.PAINTING_TASK;
-    public static final TASKS SHOPPING_TASK = TASKS.SHOPPING_TASK;
-
-    public final Task makeTask(final TASKS taskEnum) {
+    public final Task makeTask(final Tasks taskEnum) {
 
         switch (taskEnum) {
             case DRIVING_TASK:
