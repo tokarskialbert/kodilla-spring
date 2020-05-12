@@ -10,17 +10,7 @@ public class Bigmac {
     private Sauce sauce;
     private List<Ingredients> ingredients;
 
-    public Bun getBun() {
-        return bun;
-    }
 
-    public int getBurgers() {
-        return burgers;
-    }
-
-    public Sauce getSauce() {
-        return sauce;
-    }
 
     public List<Ingredients> getIngredients() {
         return ingredients;
