@@ -42,4 +42,37 @@ public class DbManagerTestSuite {
         Assert.assertEquals(5, counter);
     }
 
+    @Test
+    public void testSelectUsersAndPosts() throws SQLException {
+
+        //Given
+        DbManager dbManager = DbManager.getInstance();
+
+        //When
+        String sqlQuery = "SELECT \n" +
+                "U.FIRSTNAME, U.LASTNAME, COUNT(*) AS POSTS_NUMBER\n" +
+                "FROM USERS U\n" +
+                "JOIN POSTS P ON U.ID = P.USER_ID\n" +
+                "GROUP BY P.USER_ID\n" +
+                "HAVING COUNT(*) > 1\n" +
+                "ORDER BY POSTS_NUMBER DESC;";
+
+        Statement statement = dbManager.getConnection().createStatement();
+        ResultSet rs = statement.executeQuery(sqlQuery);
+
+        //Then
+        int counter = 0;
+        while(rs.next()) {
+            System.out.println(
+                    rs.getString("FIRSTNAME") + ", " +
+                            rs.getString("LASTNAME") + ", " +
+                            rs.getInt("POSTS_NUMBER"));
+            counter++;
+        }
+        rs.close();
+        statement.close();
+
+        Assert.assertEquals(2, counter);
+
+    }
 }
